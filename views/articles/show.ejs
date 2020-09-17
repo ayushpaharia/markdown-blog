@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <%= console.log(article) %>
+    <div class="container">
+      <h1 class="mb-4 display-3 font-weight-bold">
+        <%= article.title.toUpperCase() %>
+      </h1>
+      <div class="text-muted mb-2">
+        <%= article.createdAt.toLocaleDateString() %>
+      </div>
+      <a href="/" class="btn btn-secondary">All Articles</a>
+      <a href="/articles/edit/<%= article.id %>" class="btn btn-info">Edit</a>
+      <% if(false || article.admin === "makemeanadminpls"){ %>
+      <button class="btn btn-danger">
+        <i class="fa fa-map-pin" style="color: #fff;"></i>Pinned
+      </button>
+      <% }%>
+      <div>
+        <%- article.sanitizedHtml %>
+      </div>
+    </div>
+  </body>
+</html>
