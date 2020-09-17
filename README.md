@@ -7,7 +7,6 @@
 ## Introduction
 
 This project is made by using Nodejs, Express, Bootstrap, MVC Architecture , EJS, Mongodb & Mongoose
-- It includes a Top 10 Track list.
 - Markdown like blogs
 - Create Edit and Delete Blog
 - Pinned blogs Added
