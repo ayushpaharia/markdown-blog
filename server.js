@@ -2,7 +2,6 @@ const express = require("express");
 const articleRouter = require("./routes/articles");
 const Article = require("./models/article");
 const mongoose = require("mongoose");
-const DATABASE_URL = require("config");
 const app = express();
 const methodOverride = require("method-override");
 require("dotenv").config();
