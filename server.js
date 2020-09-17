@@ -4,13 +4,15 @@ const Article = require("./models/article");
 const mongoose = require("mongoose");
 const app = express();
 const methodOverride = require("method-override");
-require("dotenv").config();
 
-mongoose.connect(process.env.DATABASE_URL, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
-});
+mongoose.connect(
+  "mongodb+srv://admin:t0Fjs1BHUn15cZct@cluster0.5qwzr.mongodb.net/Cluster0?retryWrites=true&w=majority",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  }
+);
 
 app.set("view engine", "ejs");
 
